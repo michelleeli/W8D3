@@ -32,7 +32,7 @@ function innerBubbleSortLoop(arr, i, madeAnySwaps, outerBubbleSortLoop) {
     // return arr
 
     outerBubbleSortLoop(madeAnySwaps);
-  }
+  } else {
 
   // 2. Else, use `askIfGreaterThan` to compare `arr[i]` and `arr[i +
     askIfGreaterThan(arr[i], arr[i+1], function (isGreaterThan) {
@@ -44,7 +44,7 @@ function innerBubbleSortLoop(arr, i, madeAnySwaps, outerBubbleSortLoop) {
         }
         innerBubbleSortLoop(arr, ++i, madeAnySwaps, outerBubbleSortLoop); 
     });
-
+  }
   //    1]`. Swap if necessary. Call `innerBubbleSortLoop` again to
   //    continue the inner loop. You'll want to increment i for the
   //    next call, and possibly switch madeAnySwaps if you did swap.
@@ -71,16 +71,10 @@ function absurdBubbleSort(arr, sortCompletionCallback) {
 
 // innerBubbleSortLoop([2,4,3,1], 0, false)
 
-absurdBubbleSort([1,2,3], function(arr) {
+absurdBubbleSort([4,2,1], function(arr) {
   console.log("Sorted array: " + JSON.stringify(arr));
   rl.close();
   debugger
 });
 
 
-231
-213
-123
-123
-123
-123
