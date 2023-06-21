@@ -1,6 +1,6 @@
 Function.prototype.myBind = function (context) {
-        // let holdThis = this;  // only used if not using arrow function
-    return () => {
+        // let holdThis = this;  // only used if ES5 aka test next week
+    return () => {  //test version: return function ()  { for ES5
         return this.apply(context)
     };
 }
