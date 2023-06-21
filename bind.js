@@ -1,8 +1,7 @@
 Function.prototype.myBind = function (context) {
-    let scope = context;
-    let holdThis = this;
+        // let holdThis = this;  // only used if not using arrow function
     return () => {
-        return holdThis.apply(scope)
+        return this.apply(context)
     };
 }
 
