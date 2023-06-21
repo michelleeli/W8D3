@@ -28,10 +28,6 @@ class Clock {
 
     _tick() {
         // 1. Increment the time by one second.
-        debugger
-        // this.hour = time[0];
-        // this.minutes = time[1];
-        // this.seconds = time[2];
         this.seconds = this.seconds + 1;
 
         if (this.seconds === 60) {
